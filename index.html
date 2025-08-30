@@ -237,46 +237,41 @@
     </div>
 </div>
 
-    <!-- View More Button -->
-    <div class="text-center mt-3">
-      <button id="viewMoreBtn" class="btn btn-primary px-4">View More</button>
-    </div>
-  </div>
-</section>
-
-<!-- Certificate Modal -->
-<div class="modal fade" id="certificateModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <!-- ======= Modal khusus untuk kursus yang punya banyak sertifikat ======= -->
+<div class="modal fade" id="ibmModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Sertifikat</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        <h5 class="modal-title">IBM Data Science Certificates</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p id="certificateContent">Detail sertifikat akan muncul di sini.</p>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="https://coursera.org/account/accomplishments/certificate/AAA" target="_blank" class="cert-link">Python for Data Science</a>
+          </li>
+          <li class="list-group-item">
+            <a href="https://coursera.org/account/accomplishments/certificate/BBB" target="_blank" class="cert-link">Databases & SQL</a>
+          </li>
+          <li class="list-group-item">
+            <a href="https://coursera.org/account/accomplishments/certificate/CCC" target="_blank" class="cert-link">Data Visualization with Python</a>
+          </li>
+          <!-- tambahkan semua sertifikat lain -->
+        </ul>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Script -->
 <script>
-  // View More
-  document.getElementById("viewMoreBtn").addEventListener("click", function() {
-    const extras = document.querySelectorAll(".extra-cert");
-    extras.forEach(el => el.classList.remove("d-none"));
-    this.style.display = "none"; // hide button after click
+// Auto-close modal setelah klik salah satu sertifikat
+document.querySelectorAll('.cert-link').forEach(link => {
+  link.addEventListener('click', function() {
+    let modal = bootstrap.Modal.getInstance(document.getElementById('ibmModal'));
+    modal.hide();
   });
-
-  // Sertifikat Modal isi konten
-  const certModal = document.getElementById("certificateModal");
-  certModal.addEventListener("show.bs.modal", function (event) {
-    const button = event.relatedTarget;
-    const certName = button.getAttribute("data-cert");
-    document.getElementById("certificateContent").innerText = certName;
-  });
+});
 </script>
-
 <!-- ===== End Education Section ===== -->
 
   <!-- SKILLS -->
