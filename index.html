@@ -157,132 +157,148 @@
   </section>
 
   <!-- EDUCATION -->
+<!-- ===== Education Section ===== -->
 <section id="education" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-4">Education</h2>
+    <h2 class="text-center mb-5">Education</h2>
 
     <!-- Formal Education -->
-    <div class="text-center mb-5">
-      <h4>Formal Education</h4>
-      <div class="card mx-auto shadow-sm" style="max-width: 500px;">
+    <div class="mb-5">
+      <h4 class="mb-3">Formal Education</h4>
+      <div class="card shadow-sm mb-3">
         <div class="card-body">
-          <h5 class="fw-bold">Bachelor of Computer Science</h5>
-          <p class="mb-0">Universitas Sriwijaya</p>
-          <small class="text-muted">2017 – 2021</small>
+          <h5 class="card-title fw-bold">Bachelor of Computer Science</h5>
+          <p class="card-text mb-1">Universitas Sriwijaya</p>
+          <p class="card-text text-muted">2016 - 2020</p>
         </div>
       </div>
     </div>
 
-    <!-- Courses & Certificates -->
-    <h4 class="text-center mb-4">Courses & Certificates</h4>
-
-    <!-- Scrollable wrapper -->
-    <div style="max-height: 700px; overflow-y: auto; padding-right: 10px;">
-      <div class="row">
-
-        <!-- IBM Data Science -->
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card h-100 shadow-sm text-center">
-            <div class="card-body d-flex flex-column">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/IBM_logo.svg" 
-                   alt="IBM Logo" class="mb-3" style="height:40px;">
-              <h6 class="fw-bold">IBM Data Science Professional Certificate</h6>
-              <small class="text-muted d-block mb-3">Coursera</small>
-              <ul class="list-unstyled text-start small flex-grow-1 cert-list" data-limit="5">
-                <li><a href="LINK_SERTIFIKAT" target="_blank">Science Orientation</a></li>
-                <li><a href="LINK_SERTIFIKAT" target="_blank">Tools for Data Science</a></li>
-                <li><a href="LINK_SERTIFIKAT" target="_blank">Data Science Methodology</a></li>
-                <li><a href="LINK_SERTIFIKAT" target="_blank">Python for Data Science</a></li>
-                <li><a href="LINK_SERTIFIKAT" target="_blank">Databases & SQL</a></li>
-                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Data Analysis with Python</a></li>
-                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Data Visualization with Python</a></li>
-                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Machine Learning with Python</a></li>
-                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Applied Data Science Capstone</a></li>
-                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Data Science Project</a></li>
-              </ul>
-              <a href="javascript:void(0)" class="view-more text-primary fw-bold fst-italic float-end">View More</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- TOEFL -->
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card h-100 shadow-sm text-center">
+    <!-- Certificates & Courses -->
+    <div>
+      <h4 class="mb-3">Certificates & Courses</h4>
+      <div class="row" id="certificates-container">
+        <!-- First 5 Certificates (Default Visible) -->
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm certificate-item">
             <div class="card-body">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/ETS_Logo.png" 
-                   alt="TOEFL Logo" class="mb-3" style="height:40px;">
-              <h6 class="fw-bold">TOEFL ITP</h6>
-              <small class="text-muted d-block mb-2">Score: 573</small>
-              <a href="LINK_TOEFL_CERTIFICATE" target="_blank" class="btn btn-outline-success btn-sm">View Certificate</a>
+              <a href="https://www.credly.com/badges/..." target="_blank" class="stretched-link fw-bold text-decoration-none">
+                IBM Data Science Professional Certificate
+              </a>
+              <p class="text-muted mb-0">Coursera</p>
             </div>
           </div>
         </div>
 
-        <!-- English for Career Development -->
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="card h-100 shadow-sm text-center">
-            <div class="card-body d-flex flex-column">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Coursera_logo.png" 
-                   alt="Coursera Logo" class="mb-3" style="height:40px;">
-              <h6 class="fw-bold">English for Career Development</h6>
-              <small class="text-muted d-block mb-3">UPenn & Georgia Tech via Coursera</small>
-              <ul class="list-unstyled text-start small flex-grow-1 cert-list" data-limit="4">
-                <li><a href="LINK_SERTIFIKAT" target="_blank">English for Career Development</a></li>
-                <li><a href="LINK_SERTIFIKAT" target="_blank">Business English Communication</a></li>
-                <li><a href="LINK_SERTIFIKAT" target="_blank">Academic Writing in English</a></li>
-                <li><a href="LINK_SERTIFIKAT" target="_blank">English for Business & Entrepreneurship</a></li>
-              </ul>
-              <!-- kalau nanti ada lebih banyak → sistem View More otomatis aktif -->
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm certificate-item">
+            <div class="card-body">
+              <a href="https://www.datacamp.com/..." target="_blank" class="stretched-link fw-bold text-decoration-none">
+                Data Analyst with Python
+              </a>
+              <p class="text-muted mb-0">Datacamp</p>
             </div>
           </div>
         </div>
 
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm certificate-item">
+            <div class="card-body">
+              <a href="https://..." target="_blank" class="stretched-link fw-bold text-decoration-none">
+                SQL for Data Science
+              </a>
+              <p class="text-muted mb-0">Coursera</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm certificate-item">
+            <div class="card-body">
+              <a href="https://..." target="_blank" class="stretched-link fw-bold text-decoration-none">
+                Data Visualization with Python
+              </a>
+              <p class="text-muted mb-0">Coursera</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm certificate-item">
+            <div class="card-body">
+              <a href="https://..." target="_blank" class="stretched-link fw-bold text-decoration-none">
+                Machine Learning Basics
+              </a>
+              <p class="text-muted mb-0">Coursera</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOEFL Certificate (Button stays) -->
+      <div class="mt-3">
+        <button class="btn btn-outline-primary" onclick="window.open('toefl-link.pdf','_blank')">
+          TOEFL Certificate
+        </button>
+      </div>
+
+      <!-- View More (Modal Trigger) -->
+      <div class="text-end mt-3">
+        <button class="btn btn-link fst-italic" data-bs-toggle="modal" data-bs-target="#allCertificatesModal">
+          View More
+        </button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Script -->
+<!-- ===== Certificates Modal ===== -->
+<div class="modal fade" id="allCertificatesModal" tabindex="-1" aria-labelledby="allCertificatesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="allCertificatesModalLabel">All Certificates & Courses</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Example more certificates -->
+          <div class="col-md-6 mb-3">
+            <div class="card shadow-sm certificate-item">
+              <div class="card-body">
+                <a href="https://..." target="_blank" class="stretched-link fw-bold text-decoration-none">
+                  Advanced SQL for Data Analysis
+                </a>
+                <p class="text-muted mb-0">Datacamp</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <div class="card shadow-sm certificate-item">
+              <div class="card-body">
+                <a href="https://..." target="_blank" class="stretched-link fw-bold text-decoration-none">
+                  Data Wrangling with Pandas
+                </a>
+                <p class="text-muted mb-0">Coursera</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tambahkan sertifikat lainnya di sini -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Script: Close Modal on Certificate Click ===== -->
 <script>
-  document.querySelectorAll(".cert-list").forEach(list => {
-    const limit = parseInt(list.dataset.limit) || 5;
-    const items = list.querySelectorAll("li");
-    const viewMore = list.parentElement.querySelector(".view-more");
-
-    // awalnya sembunyikan extra
-    items.forEach((li, i) => {
-      if (i >= limit) li.style.display = "none";
+  document.querySelectorAll('#allCertificatesModal .certificate-item a').forEach(link => {
+    link.addEventListener('click', () => {
+      const modal = bootstrap.Modal.getInstance(document.getElementById('allCertificatesModal'));
+      modal.hide();
     });
-
-    if (viewMore) {
-      let expanded = false;
-
-      viewMore.addEventListener("click", function() {
-        if (!expanded) {
-          items.forEach(li => li.style.display = "list-item");
-          viewMore.textContent = "View Less";
-          expanded = true;
-
-          // reset otomatis kalau klik sertifikat
-          list.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", function() {
-              items.forEach((li, i) => {
-                li.style.display = i < limit ? "list-item" : "none";
-              });
-              viewMore.textContent = "View More";
-              expanded = false;
-            });
-          });
-
-        } else {
-          items.forEach((li, i) => {
-            li.style.display = i < limit ? "list-item" : "none";
-          });
-          viewMore.textContent = "View More";
-          expanded = false;
-        }
-      });
-    }
   });
 </script>
 
