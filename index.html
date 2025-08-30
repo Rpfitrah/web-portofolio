@@ -173,105 +173,110 @@
     </div>
 
     <!-- Certificates & Courses -->
-  <div>
-      <h4 class="fw-semibold mb-4">Courses & Certificates</h4>
+<div>
+  <h4 class="fw-semibold mb-4">Courses & Certificates</h4>
 
-      <!-- Row wrapper -->
-      <div class="row g-4 justify-content-center">
+  <!-- Row wrapper -->
+  <div class="row g-4 justify-content-center">
 
-        <!-- Course 1 -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card shadow-sm h-100 text-center p-3">
-            <h6 class="fw-bold">IBM Data Science</h6>
-            <p class="small text-muted">Professional Certificate</p>
-            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
-          </div>
-        </div>
-
-        <!-- Course 2 -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card shadow-sm h-100 text-center p-3">
-            <h6 class="fw-bold">Google Data Analytics</h6>
-            <p class="small text-muted">Coursera</p>
-            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
-          </div>
-        </div>
-
-        <!-- Course 3 -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card shadow-sm h-100 text-center p-3">
-            <h6 class="fw-bold">SQL for Data Analysis</h6>
-            <p class="small text-muted">Udemy</p>
-            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
-          </div>
-        </div>
-
-        <!-- Course 4 -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card shadow-sm h-100 text-center p-3">
-            <h6 class="fw-bold">Python for Everybody</h6>
-            <p class="small text-muted">Coursera</p>
-            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
-          </div>
-        </div>
-
-        <!-- Course 5 (otomatis masuk row kedua, posisinya mulai dari kiri) -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card shadow-sm h-100 text-center p-3">
-            <h6 class="fw-bold">Power BI Fundamentals</h6>
-            <p class="small text-muted">Datacamp</p>
-            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
-          </div>
-        </div>
-
-        <!-- Course 6 -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card shadow-sm h-100 text-center p-3">
-            <h6 class="fw-bold">Excel for Business</h6>
-            <p class="small text-muted">Coursera</p>
-            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
-          </div>
-        </div>
-
+    <!-- Course 1 (langsung 1 sertifikat, link biasa) -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <h6 class="fw-bold">IBM Data Science</h6>
+        <p class="small text-muted">Professional Certificate</p>
+        <a href="https://link-ibm.com" target="_blank" class="stretched-link text-decoration-none">View Certificate</a>
       </div>
     </div>
+
+    <!-- Course 2 (punya banyak sertifikat → pakai modal) -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <h6 class="fw-bold">Google Data Analytics</h6>
+        <p class="small text-muted">Coursera</p>
+        <a href="#" class="stretched-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalGoogle">View Certificates</a>
+      </div>
+    </div>
+
+    <!-- Course 3 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <h6 class="fw-bold">SQL for Data Analysis</h6>
+        <p class="small text-muted">Udemy</p>
+        <a href="https://link-sql.com" target="_blank" class="stretched-link text-decoration-none">View Certificate</a>
+      </div>
+    </div>
+
+    <!-- Course 4 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <h6 class="fw-bold">Python for Everybody</h6>
+        <p class="small text-muted">Coursera</p>
+        <a href="https://link-python.com" target="_blank" class="stretched-link text-decoration-none">View Certificate</a>
+      </div>
+    </div>
+
+    <!-- Course 5 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <h6 class="fw-bold">Power BI Fundamentals</h6>
+        <p class="small text-muted">Datacamp</p>
+        <a href="https://link-powerbi.com" target="_blank" class="stretched-link text-decoration-none">View Certificate</a>
+      </div>
+    </div>
+
+    <!-- Course 6 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card shadow-sm h-100 text-center p-3">
+        <h6 class="fw-bold">Excel for Business</h6>
+        <p class="small text-muted">Coursera</p>
+        <a href="https://link-excel.com" target="_blank" class="stretched-link text-decoration-none">View Certificate</a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-    <!-- ======= Modal khusus untuk kursus yang punya banyak sertifikat ======= -->
-<div class="modal fade" id="ibmModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+<!-- Modal Google Data Analytics -->
+<div class="modal fade" id="modalGoogle" tabindex="-1" aria-labelledby="modalGoogleLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">IBM Data Science Certificates</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <h5 class="modal-title fw-bold" id="modalGoogleLabel">Google Data Analytics Certificates</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <ul class="list-group">
           <li class="list-group-item">
-            <a href="https://coursera.org/account/accomplishments/certificate/AAA" target="_blank" class="cert-link">Python for Data Science</a>
+            <a href="https://link-sertif1.com" target="_blank" class="cert-link">Foundations: Data, Data, Everywhere</a>
           </li>
           <li class="list-group-item">
-            <a href="https://coursera.org/account/accomplishments/certificate/BBB" target="_blank" class="cert-link">Databases & SQL</a>
+            <a href="https://link-sertif2.com" target="_blank" class="cert-link">Ask Questions to Make Data-Driven Decisions</a>
           </li>
           <li class="list-group-item">
-            <a href="https://coursera.org/account/accomplishments/certificate/CCC" target="_blank" class="cert-link">Data Visualization with Python</a>
+            <a href="https://link-sertif3.com" target="_blank" class="cert-link">Prepare Data for Exploration</a>
           </li>
-          <!-- tambahkan semua sertifikat lain -->
+          <li class="list-group-item">
+            <a href="https://link-sertif4.com" target="_blank" class="cert-link">Process Data from Dirty to Clean</a>
+          </li>
+          <!-- Tambahin sertifikat lain di sini -->
         </ul>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Script: auto-close modal setelah klik sertifikat -->
 <script>
-// Auto-close modal setelah klik salah satu sertifikat
-document.querySelectorAll('.cert-link').forEach(link => {
-  link.addEventListener('click', function() {
-    let modal = bootstrap.Modal.getInstance(document.getElementById('ibmModal'));
-    modal.hide();
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.cert-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const modal = bootstrap.Modal.getInstance(document.getElementById('modalGoogle'));
+        modal.hide();
+      });
+    });
   });
-});
 </script>
+
 <!-- ===== End Education Section ===== -->
 
   <!-- SKILLS -->
