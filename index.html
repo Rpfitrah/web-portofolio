@@ -173,73 +173,68 @@
     </div>
 
     <!-- Certificates & Courses -->
-    <!-- Certificates & Courses -->
-<div>
-  <h4 class="fw-semibold mb-4">Certificates & Courses</h4>
-  <div class="row" id="certificates-preview">
+  <div>
+      <h4 class="fw-semibold mb-4">Courses & Certificates</h4>
 
-    <!-- IBM Data Science (punya banyak sertifikat → pakai modal) -->
-    <div class="col-md-3 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h6 class="card-title fw-bold">IBM Data Science</h6>
-          <p class="card-text small">Professional Certificate (9 courses)</p>
-          <!-- tombol modal khusus IBM -->
-          <a href="#" data-bs-toggle="modal" data-bs-target="#ibmModal">View Certificates</a>
+      <!-- Row wrapper -->
+      <div class="row g-4 justify-content-center">
+
+        <!-- Course 1 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card shadow-sm h-100 text-center p-3">
+            <h6 class="fw-bold">IBM Data Science</h6>
+            <p class="small text-muted">Professional Certificate</p>
+            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- TOEFL (cuma 1 sertifikat → langsung link) -->
-    <div class="col-md-3 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h6 class="card-title fw-bold">TOEFL ITP</h6>
-          <p class="card-text small">English Proficiency Test</p>
-          <!-- langsung link -->
-          <a href="https://drive.google.com/toefl_certificate_link" target="_blank">View Certificate</a>
+        <!-- Course 2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card shadow-sm h-100 text-center p-3">
+            <h6 class="fw-bold">Google Data Analytics</h6>
+            <p class="small text-muted">Coursera</p>
+            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Course lain (misalnya cuma 1 sertifikat) -->
-    <div class="col-md-3 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h6 class="card-title fw-bold">SQL for Data Science</h6>
-          <p class="card-text small">Learned database query, joins, aggregations</p>
-          <a href="https://www.coursera.org/account/accomplishments/certificate/YYYY" target="_blank">View Certificate</a>
+        <!-- Course 3 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card shadow-sm h-100 text-center p-3">
+            <h6 class="fw-bold">SQL for Data Analysis</h6>
+            <p class="small text-muted">Udemy</p>
+            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
+          </div>
         </div>
+
+        <!-- Course 4 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card shadow-sm h-100 text-center p-3">
+            <h6 class="fw-bold">Python for Everybody</h6>
+            <p class="small text-muted">Coursera</p>
+            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- Course 5 (otomatis masuk row kedua, posisinya mulai dari kiri) -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card shadow-sm h-100 text-center p-3">
+            <h6 class="fw-bold">Power BI Fundamentals</h6>
+            <p class="small text-muted">Datacamp</p>
+            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="card shadow-sm h-100 text-center p-3">
+            <h6 class="fw-bold">Excel for Business</h6>
+            <p class="small text-muted">Coursera</p>
+            <a href="#" class="stretched-link text-decoration-none">View Certificate</a>
+          </div>
+        </div>
+
       </div>
     </div>
-
-  </div>
-</div>
-
-<!-- ======= Modal khusus untuk kursus yang punya banyak sertifikat ======= -->
-<div class="modal fade" id="ibmModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">IBM Data Science Certificates</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <a href="https://coursera.org/account/accomplishments/certificate/AAA" target="_blank" class="cert-link">Python for Data Science</a>
-          </li>
-          <li class="list-group-item">
-            <a href="https://coursera.org/account/accomplishments/certificate/BBB" target="_blank" class="cert-link">Databases & SQL</a>
-          </li>
-          <li class="list-group-item">
-            <a href="https://coursera.org/account/accomplishments/certificate/CCC" target="_blank" class="cert-link">Data Visualization with Python</a>
-          </li>
-          <!-- tambahkan semua sertifikat lain -->
-        </ul>
-      </div>
-    </div>
-  </div>
 </div>
 
 <script>
