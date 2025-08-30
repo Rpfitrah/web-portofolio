@@ -186,46 +186,16 @@
               <h6 class="fw-bold">IBM Data Science Professional Certificate</h6>
               <small class="text-muted d-block mb-3">Coursera</small>
               <ul class="list-unstyled text-start small flex-grow-1 cert-list" data-limit="5">
-                <li class="d-flex justify-content-between">
-                  <span>Science Orientation</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between">
-                  <span>Tools for Data Science</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between">
-                  <span>Data Science Methodology</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between">
-                  <span>Python for Data Science</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between">
-                  <span>Databases & SQL</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between extra-cert">
-                  <span>Data Analysis with Python</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between extra-cert">
-                  <span>Data Visualization with Python</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between extra-cert">
-                  <span>Machine Learning with Python</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between extra-cert">
-                  <span>Applied Data Science Capstone</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between extra-cert">
-                  <span>Data Science Project</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">Science Orientation</a></li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">Tools for Data Science</a></li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">Data Science Methodology</a></li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">Python for Data Science</a></li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">Databases & SQL</a></li>
+                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Data Analysis with Python</a></li>
+                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Data Visualization with Python</a></li>
+                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Machine Learning with Python</a></li>
+                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Applied Data Science Capstone</a></li>
+                <li class="extra-cert"><a href="LINK_SERTIFIKAT" target="_blank">Data Science Project</a></li>
               </ul>
               <a href="javascript:void(0)" class="view-more text-primary fw-bold fst-italic float-end">View More</a>
             </div>
@@ -240,7 +210,7 @@
                    alt="TOEFL Logo" class="mb-3" style="height:40px;">
               <h6 class="fw-bold">TOEFL ITP</h6>
               <small class="text-muted d-block mb-2">Score: 573</small>
-              <a href="#" class="btn btn-outline-success btn-sm">View Certificate</a>
+              <a href="LINK_TOEFL_CERTIFICATE" target="_blank" class="btn btn-outline-success btn-sm">View Certificate</a>
             </div>
           </div>
         </div>
@@ -254,24 +224,12 @@
               <h6 class="fw-bold">English for Career Development</h6>
               <small class="text-muted d-block mb-3">UPenn & Georgia Tech via Coursera</small>
               <ul class="list-unstyled text-start small flex-grow-1 cert-list" data-limit="4">
-                <li class="d-flex justify-content-between">
-                  <span>English for Career Development</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between">
-                  <span>Business English Communication</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between">
-                  <span>Academic Writing in English</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
-                <li class="d-flex justify-content-between">
-                  <span>English for Business & Entrepreneurship</span> 
-                  <a href="#" class="btn btn-sm btn-outline-success">View Certificate</a>
-                </li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">English for Career Development</a></li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">Business English Communication</a></li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">Academic Writing in English</a></li>
+                <li><a href="LINK_SERTIFIKAT" target="_blank">English for Business & Entrepreneurship</a></li>
               </ul>
-              <!-- contoh kalau nanti ada lebih banyak, sistemnya sama -->
+              <!-- kalau nanti ada lebih banyak → sistem View More otomatis aktif -->
             </div>
           </div>
         </div>
@@ -298,15 +256,15 @@
 
       viewMore.addEventListener("click", function() {
         if (!expanded) {
-          items.forEach(li => li.style.display = "flex");
+          items.forEach(li => li.style.display = "list-item");
           viewMore.textContent = "View Less";
           expanded = true;
 
-          // reset otomatis kalau klik certificate
-          list.querySelectorAll("a").forEach(btn => {
-            btn.addEventListener("click", function() {
+          // reset otomatis kalau klik sertifikat
+          list.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function() {
               items.forEach((li, i) => {
-                li.style.display = i < limit ? "flex" : "none";
+                li.style.display = i < limit ? "list-item" : "none";
               });
               viewMore.textContent = "View More";
               expanded = false;
@@ -315,7 +273,7 @@
 
         } else {
           items.forEach((li, i) => {
-            li.style.display = i < limit ? "flex" : "none";
+            li.style.display = i < limit ? "list-item" : "none";
           });
           viewMore.textContent = "View More";
           expanded = false;
