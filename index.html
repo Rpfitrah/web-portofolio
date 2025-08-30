@@ -154,153 +154,126 @@
   </section>
 
   <!-- EDUCATION -->
-<!-- Education Section -->
 <section id="education" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5">Education</h2>
-    <div class="row">
-      <!-- Formal Education -->
-      <div class="col-lg-6 mb-4">
-        <h4 class="fw-bold mb-3">Formal Education</h4>
-        <div class="card shadow-sm border-0 mb-3">
+    <h2 class="text-center mb-4">Education</h2>
+
+    <!-- Formal Education -->
+    <div class="text-center mb-5">
+      <h4>Formal Education</h4>
+      <div class="card mx-auto shadow-sm" style="max-width: 500px;">
+        <div class="card-body">
+          <h5 class="fw-bold">Bachelor of Computer Science</h5>
+          <p class="mb-0">Universitas Sriwijaya</p>
+          <small class="text-muted">2017 – 2021</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courses & Certificates -->
+    <h4 class="text-center mb-4">Courses & Certificates</h4>
+    <div class="row" id="certificateGrid">
+
+      <!-- IBM Data Science (collapsible list) -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100 shadow-sm text-center">
           <div class="card-body">
-            <h5 class="card-title fw-bold">Bachelor of Computer Science</h5>
-            <p class="card-text mb-1">Universitas Sriwijaya</p>
-            <p class="text-muted mb-0">2017 – 2021</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/IBM_logo.svg" 
+                 alt="IBM Logo" class="mb-3" style="height:40px;">
+            <h6 class="fw-bold">IBM Data Science Professional Certificate</h6>
+            <small class="text-muted d-block mb-3">Coursera</small>
+            <ul class="list-unstyled text-start small" id="ibmList">
+              <li>Science Orientation</li>
+              <li>Tools for Data Science</li>
+              <li>Data Science Methodology</li>
+              <li>Python for Data Science</li>
+              <li>Databases & SQL</li>
+            </ul>
+            <a href="javascript:void(0)" id="viewMoreIbm" class="text-primary fw-bold fst-italic float-end">View More</a>
           </div>
         </div>
       </div>
 
-      <!-- Courses & Certificates -->
-      <div class="col-lg-6 mb-4">
-        <h4 class="fw-bold mb-3">Courses & Certificates</h4>
-        <div class="row row-cols-1 row-cols-md-2 g-3" id="certificate-list">
-          <!-- Default 5 Certificates -->
-          <div class="col certificate-item">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">IBM Data Science Professional Certificate</h6>
-                <p class="text-muted small mb-0">Coursera</p>
-              </div>
-            </div>
+      <!-- TOEFL -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100 shadow-sm text-center">
+          <div class="card-body">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/ETS_Logo.png" 
+                 alt="TOEFL Logo" class="mb-3" style="height:40px;">
+            <h6 class="fw-bold">TOEFL ITP</h6>
+            <small class="text-muted d-block mb-3">Score: 573</small>
+            <a href="#" class="btn btn-outline-success btn-sm">View Certificate</a>
           </div>
-
-          <div class="col certificate-item">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">SQL for Data Science</h6>
-                <p class="text-muted small mb-0">Coursera</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col certificate-item">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Python for Data Analysis</h6>
-                <p class="text-muted small mb-0">Datacamp</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col certificate-item">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Data Visualization with Python</h6>
-                <p class="text-muted small mb-0">Coursera</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col certificate-item">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Excel for Data Analysis</h6>
-                <p class="text-muted small mb-0">Udemy</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hidden Certificates -->
-          <div class="col certificate-item d-none">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Statistics for Data Science</h6>
-                <p class="text-muted small mb-0">EdX</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col certificate-item d-none">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Machine Learning Basics</h6>
-                <p class="text-muted small mb-0">Coursera</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col certificate-item d-none">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Power BI for Beginners</h6>
-                <p class="text-muted small mb-0">Codebasics</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col certificate-item d-none">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Tableau Fundamentals</h6>
-                <p class="text-muted small mb-0">Udemy</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col certificate-item d-none">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-body">
-                <h6 class="card-title fw-bold">Advanced Excel Dashboarding</h6>
-                <p class="text-muted small mb-0">LinkedIn Learning</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Button -->
-        <div class="text-end mt-3">
-          <button id="viewMoreBtn" class="btn btn-outline-primary fw-bold fst-italic">View More</button>
         </div>
       </div>
+
+      <!-- English for Career Development -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100 shadow-sm text-center">
+          <div class="card-body">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Coursera_logo.png" 
+                 alt="Coursera Logo" class="mb-3" style="height:40px;">
+            <h6 class="fw-bold">English for Career Development</h6>
+            <small class="text-muted d-block mb-3">UPenn & Georgia Tech via Coursera</small>
+            <ul class="list-unstyled text-start small">
+              <li>English for Career Development</li>
+              <li>Business English Communication</li>
+              <li>Academic Writing in English</li>
+              <li>English for Business & Entrepreneurship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder for more -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100 shadow-sm text-center d-flex align-items-center justify-content-center">
+          <p class="mb-0 text-muted">More Certificates Coming Soon...</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- Script for Toggle Certificates -->
+<!-- Script for IBM "View More" -->
 <script>
-  const viewMoreBtn = document.getElementById("viewMoreBtn");
-  const certificateItems = document.querySelectorAll("#certificate-list .certificate-item");
+  const ibmList = document.getElementById("ibmList");
+  const viewMoreIbm = document.getElementById("viewMoreIbm");
 
-  viewMoreBtn.addEventListener("click", () => {
-    const isExpanded = viewMoreBtn.dataset.expanded === "true";
+  const extraCertificates = [
+    "Data Analysis with Python",
+    "Data Visualization with Python",
+    "Machine Learning with Python",
+    "Applied Data Science Capstone",
+    "Data Science Project"
+  ];
 
-    if (!isExpanded) {
-      certificateItems.forEach(item => item.classList.remove("d-none"));
-      document.getElementById("certificate-list").classList.add("overflow-auto");
-      viewMoreBtn.textContent = "View Less";
-      viewMoreBtn.dataset.expanded = "true";
-    } else {
-      certificateItems.forEach((item, index) => {
-        if (index >= 5) item.classList.add("d-none");
+  let expanded = false;
+
+  viewMoreIbm.addEventListener("click", function() {
+    if (!expanded) {
+      extraCertificates.forEach(cert => {
+        const li = document.createElement("li");
+        li.textContent = cert;
+        ibmList.appendChild(li);
       });
-      document.getElementById("certificate-list").classList.remove("overflow-auto");
-      viewMoreBtn.textContent = "View More";
-      viewMoreBtn.dataset.expanded = "false";
-      window.scrollTo({ top: document.getElementById("education").offsetTop, behavior: "smooth" });
+      viewMoreIbm.textContent = "View Less";
+    } else {
+      // Reset ke hanya 5 sertifikat awal
+      ibmList.innerHTML = `
+        <li>Science Orientation</li>
+        <li>Tools for Data Science</li>
+        <li>Data Science Methodology</li>
+        <li>Python for Data Science</li>
+        <li>Databases & SQL</li>
+      `;
+      viewMoreIbm.textContent = "View More";
     }
+    expanded = !expanded;
   });
 </script>
+
 <!-- ===== End Education Section ===== -->
 
   <!-- SKILLS -->
