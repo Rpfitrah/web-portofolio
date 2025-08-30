@@ -172,22 +172,22 @@
 
     <!-- Courses & Certificates -->
     <h4 class="text-center mb-4">Courses & Certificates</h4>
-    <div class="row" id="certificateGrid">
+    <div class="row" id="certificateGrid" style="max-height: 700px; overflow-y: auto; padding-right: 10px;">
 
-      <!-- IBM Data Science (collapsible list) -->
+      <!-- IBM Data Science -->
       <div class="col-md-6 col-lg-3 mb-4">
         <div class="card h-100 shadow-sm text-center">
-          <div class="card-body">
+          <div class="card-body d-flex flex-column">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/IBM_logo.svg" 
                  alt="IBM Logo" class="mb-3" style="height:40px;">
             <h6 class="fw-bold">IBM Data Science Professional Certificate</h6>
             <small class="text-muted d-block mb-3">Coursera</small>
-            <ul class="list-unstyled text-start small" id="ibmList">
-              <li>Science Orientation</li>
-              <li>Tools for Data Science</li>
-              <li>Data Science Methodology</li>
-              <li>Python for Data Science</li>
-              <li>Databases & SQL</li>
+            <ul class="list-unstyled text-start small flex-grow-1" id="ibmList">
+              <li>Science Orientation <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+              <li>Tools for Data Science <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+              <li>Data Science Methodology <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+              <li>Python for Data Science <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+              <li>Databases & SQL <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
             </ul>
             <a href="javascript:void(0)" id="viewMoreIbm" class="text-primary fw-bold fst-italic float-end">View More</a>
           </div>
@@ -197,12 +197,12 @@
       <!-- TOEFL -->
       <div class="col-md-6 col-lg-3 mb-4">
         <div class="card h-100 shadow-sm text-center">
-          <div class="card-body">
+          <div class="card-body d-flex flex-column justify-content-between">
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/ETS_Logo.png" 
                  alt="TOEFL Logo" class="mb-3" style="height:40px;">
             <h6 class="fw-bold">TOEFL ITP</h6>
             <small class="text-muted d-block mb-3">Score: 573</small>
-            <a href="#" class="btn btn-outline-success btn-sm">View Certificate</a>
+            <a href="#" class="btn btn-outline-success btn-sm mt-auto">View Certificate</a>
           </div>
         </div>
       </div>
@@ -216,16 +216,16 @@
             <h6 class="fw-bold">English for Career Development</h6>
             <small class="text-muted d-block mb-3">UPenn & Georgia Tech via Coursera</small>
             <ul class="list-unstyled text-start small">
-              <li>English for Career Development</li>
-              <li>Business English Communication</li>
-              <li>Academic Writing in English</li>
-              <li>English for Business & Entrepreneurship</li>
+              <li>English for Career Development <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+              <li>Business English Communication <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+              <li>Academic Writing in English <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+              <li>English for Business & Entrepreneurship <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Placeholder for more -->
+      <!-- Placeholder -->
       <div class="col-md-6 col-lg-3 mb-4">
         <div class="card h-100 shadow-sm text-center d-flex align-items-center justify-content-center">
           <p class="mb-0 text-muted">More Certificates Coming Soon...</p>
@@ -236,10 +236,18 @@
   </div>
 </section>
 
-<!-- Script for IBM "View More" -->
+<!-- Script -->
 <script>
   const ibmList = document.getElementById("ibmList");
   const viewMoreIbm = document.getElementById("viewMoreIbm");
+
+  const initialCertificates = `
+    <li>Science Orientation <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+    <li>Tools for Data Science <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+    <li>Data Science Methodology <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+    <li>Python for Data Science <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+    <li>Databases & SQL <a href="#" class="btn btn-sm btn-outline-success ms-2">View Certificate</a></li>
+  `;
 
   const extraCertificates = [
     "Data Analysis with Python",
@@ -251,27 +259,36 @@
 
   let expanded = false;
 
+  function resetIBM() {
+    ibmList.innerHTML = initialCertificates;
+    viewMoreIbm.textContent = "View More";
+    expanded = false;
+  }
+
   viewMoreIbm.addEventListener("click", function() {
     if (!expanded) {
       extraCertificates.forEach(cert => {
         const li = document.createElement("li");
-        li.textContent = cert;
+        li.innerHTML = `${cert} <a href="#" class="btn btn-sm btn-outline-success ms-2 ibm-cert">View Certificate</a>`;
         ibmList.appendChild(li);
       });
       viewMoreIbm.textContent = "View Less";
+      expanded = true;
+
+      // tambahin event supaya setelah klik View Certificate, balik ke default
+      document.querySelectorAll(".ibm-cert").forEach(btn => {
+        btn.addEventListener("click", function() {
+          resetIBM();
+        });
+      });
+
     } else {
-      // Reset ke hanya 5 sertifikat awal
-      ibmList.innerHTML = `
-        <li>Science Orientation</li>
-        <li>Tools for Data Science</li>
-        <li>Data Science Methodology</li>
-        <li>Python for Data Science</li>
-        <li>Databases & SQL</li>
-      `;
-      viewMoreIbm.textContent = "View More";
+      resetIBM();
     }
-    expanded = !expanded;
   });
+
+  // reset awal
+  resetIBM();
 </script>
 
 <!-- ===== End Education Section ===== -->
